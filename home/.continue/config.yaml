@@ -1,0 +1,30 @@
+name: Local Assistant
+version: 1.0.0
+schema: v1
+models: 
+  - name: DeepSeek distil
+    model: deepseek-r1-distill-qwen-14b
+    apiBase: https://deepseek-r1-distill-qwen-14b-maas-apicast-production.apps.prod.rhoai.rh-aiservices-bu.com:443
+    apiKey: 
+    defaultCompletionOptions:
+      contextLength: 50000
+    roles:
+      - chat
+      - edit
+      - autocomplete
+      - apply
+    capabilities:
+      - tool_use
+  - name: Granite Instruct
+    model: granite-3-8b-instruct
+    apiBase: https://granite-3-8b-instruct-maas-apicast-production.apps.prod.rhoai.rh-aiservices-bu.com:443
+    apiKey: 
+    defaultCompletionOptions:
+      contextLength: 50000
+    roles:
+      - chat
+      - edit
+      - autocomplete
+      - apply
+    capabilities:
+      - tool_use
