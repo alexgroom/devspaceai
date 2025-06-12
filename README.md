@@ -9,9 +9,9 @@ This is suggested prompt for Continue to work on to deliver a streamlit based AI
 
 ```
 Can you write me some python code based around streamlit that presents a ui to upload files, and then
-summarizes the file content using an openai v1 based llm rest api. Need to support file types pdf, txt and json.
+summarizes the file content using an llm using openai legacy completions based rest api. Need to support file types pdf, txt and json.
 I'm using python 3.11.
-My llm model is called "granite-3-8b-instruct" available at this REST API <https://> and uses a bearer token api key.
+My llm model is called "granite-3-8b-instruct" available at this REST API <https://> and uses a bearer token api key found in environment variable OPENAI_API_KEY
 ```
 
 ## Terminal:
