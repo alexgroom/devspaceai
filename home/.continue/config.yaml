@@ -3,8 +3,9 @@ version: 1.0.0
 schema: v1
 models: 
   - name: DeepSeek distil
+    provider: openai
     model: deepseek-r1-distill-qwen-14b
-    apiBase: https://deepseek-r1-distill-qwen-14b-maas-apicast-production.apps.prod.rhoai.rh-aiservices-bu.com:443
+    apiBase: https://deepseek-r1-distill-qwen-14b-maas-apicast-production.apps.prod.rhoai.rh-aiservices-bu.com:443/v1
     apiKey: 
     defaultCompletionOptions:
       contextLength: 50000
@@ -16,15 +17,28 @@ models:
     capabilities:
       - tool_use
   - name: Granite Instruct
+    provider: openai
     model: granite-3-8b-instruct
-    apiBase: https://granite-3-8b-instruct-maas-apicast-production.apps.prod.rhoai.rh-aiservices-bu.com:443
+    apiBase: https://granite-3-8b-instruct-maas-apicast-production.apps.prod.rhoai.rh-aiservices-bu.com:443/v1
     apiKey: 
     defaultCompletionOptions:
       contextLength: 50000
     roles:
       - chat
       - edit
-      - autocomplete
       - apply
     capabilities:
       - tool_use
+  - name: Granite Code Instruct
+    provider: openai
+    model: granite-8b-code-instruct-128k
+    apiBase: https://granite-8b-code-instruct-maas-apicast-production.apps.prod.rhoai.rh-aiservices-bu.com:443/v1
+    apiKey: 
+    defaultCompletionOptions:
+      contextLength: 50000
+    roles:
+      - chat
+      - edit
+      - apply
+    capabilities:
+      - tool_use      
