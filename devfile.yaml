@@ -9,7 +9,7 @@ projects:
         revision: main
       remotes:
         origin: 'https://github.com/alexgroom/devspaceai.git'
-    name: projects
+    name: devspaceai
 components:  
   - container:
       image: registry.redhat.io/devspaces/udi-rhel9:latest
