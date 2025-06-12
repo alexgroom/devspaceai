@@ -12,9 +12,11 @@ projects:
     name: devspaceai
 components:  
   - container:
-      image: registry.redhat.io/devspaces/udi-rhel9:latest
+      # image will need updating as dev spaces refreshes, this is based on 3.21
+      image: 'quay.io/devfile/universal-developer-image:ubi8-d071837'
+      sourceMapping: /projects
       mountSources: true
       env:
         - name: HOME
           value: "/projects/home"
-    name: workspace
+    name: universal-developer-image
