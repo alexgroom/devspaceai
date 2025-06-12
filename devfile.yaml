@@ -19,4 +19,5 @@ components:
       env:
         - name: HOME
           value: "/projects/home"
+      memoryLimit: 3072Mi
     name: universal-developer-image
