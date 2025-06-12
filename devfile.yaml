@@ -1,0 +1,20 @@
+schemaVersion: 2.2.0
+metadata:
+  generateName: empty
+projects:
+  - attributes:
+      source-origin: branch
+    git:
+      checkoutFrom:
+        revision: main
+      remotes:
+        origin: 'https://github.com/alexgroom/devspacesai.git'
+    name: devspacesai
+components:  
+  - container:
+      image: registry.redhat.io/devspaces/udi-rhel9:latest
+      mountSources: true
+      env:
+        - name: HOME
+          value: "/projects/home"
+    name: workspace
